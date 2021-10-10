@@ -5,6 +5,25 @@ from gqlapp.models import Product
 import graphene
 
 
+"""
+An ObjectType is a block which is used to 
+define a relation between fields & schema.
+
+A Schema describes the relationship between fields
+in an API.
+
+Resolvers are methods which help to answer queries
+
+Scalars = DataTypes
+
+Queries = Operations that Read data
+
+Mutations = Operations that update data
+
+Subscriptions = Operations that feed live data via the API, like websockets
+
+
+"""
 
 
 class Products(DjangoObjectType):
@@ -14,7 +33,7 @@ class Products(DjangoObjectType):
         interfaces = (relay.Node, )
 
 
-        
+
 
 class Query(graphene.ObjectType):
     product_info = relay.Node.Field(Products)
