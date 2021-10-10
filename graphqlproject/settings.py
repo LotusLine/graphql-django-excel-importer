@@ -37,6 +37,11 @@ INSTALLED_APPS = [
 
 
 
+GRAPHENE = {
+    'SCHEMA': 'gqlapp.schema.schema' # Where your Graphene schema lives
+}
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -123,6 +128,3 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-GRAPHENE = {
-    'SCHEMA': 'gqlapp.schema.schema'
-}
